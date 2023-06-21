@@ -1,5 +1,8 @@
 {
   "dependencies": {
     "json-server-auth": "^2.1.0"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^8.0.2"
   }
 }
