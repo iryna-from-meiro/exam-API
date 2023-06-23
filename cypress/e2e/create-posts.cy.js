@@ -21,6 +21,11 @@ describe('Testing creating post as authorized user', () => {
 
     let sessionData;
     before(() => {
+        cy.log('registration of user')
+        cy.request('POST', '/664/users', user).then((response) => {
+            expect(response.status).to.be.equal(201);
+        });
+        
         cy.log('authorization and getting accessToken');
         return login(user).then((data) => {
             sessionData = data;
